@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+nav{
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.logo{
+    line-height: 80px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Akaya Telivigala';
+}
+
+.links{
+    display: flex;
+}
+
+.links>.child {
+    line-height: 80px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-family: 'Aclonica';
+    cursor: pointer;
+    /* background-color: blueviolet; */
+}
+
+.links>.child>a{
+    color: white;
+    text-decoration: none;
+    transition: .4s ease;
+}
+
+.links>.child:hover>a{
+    text-decoration: underline;
+}
+
+.links>.child:hover>.dropdown{
+    display: block;
+}
+
+.dropdown{
+    background-color: #000;
+    line-height: 30px;
+    width: 150px;
+    position: absolute;
+    display: none;
+}
+
+.dropdown>.dd-elements{
+    padding: 5px 0 5px 20px;
+    border: 2px solid #000;
+    /* border-bottom-color: #fff; */
+    transition: .4s ease;
+}
+
+.dropdown>.dd-elements:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.icon{
+    line-height: 80px;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .icon{
+        display: block;
+    }
+
+    .links{
+        display: block;
+        background-color: #000;
+        position: absolute;
+        left: -100%;
+        /* left: 0; */
+        width: 100%;
+        top: 80px;
+        transition: .4s ease-out;
+    }
+    .links>.child{
+        line-height: 50px;
+    }
+    .dropdown{
+        position: relative;
+        display: block;
+        background-color: transparent;
+    }
+    .dropdown>.dd-elements{
+        border: none;
+    }
+    .dropdown>.dd-elements:hover{
+        color: #fff;
+        background-color: transparent;
+    }
+}
